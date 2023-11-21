@@ -9,8 +9,8 @@ const Header = ({ authenticate, setAuthenticate }) => {
   const goToMain = () => {
     if (authenticate) {
       navigate("/");
+      setAuthenticate(false)
       console.log('메인페이지 이동')
-      
     } else {
       navigate('/login')
     }
@@ -19,7 +19,7 @@ const Header = ({ authenticate, setAuthenticate }) => {
     <div className="header-box">
       <div className="header-box-logo">
         {/* 메인페이지로 이동하도록 URL를 지정하시오. */}
-        <Link to={"메인"}>
+        <Link to={"/"}>
           <img
             src="https://cdn.bonif.co.kr/resources/web/css/images/logo_gnb.png"
             alt="이미지"
@@ -30,10 +30,10 @@ const Header = ({ authenticate, setAuthenticate }) => {
         <ul className="header-box-nav-list">
           {/* 각 메뉴버튼 클릭 시, 각 페이지가 보여지도록 URL를 정의하시오. */}
           <li>
-            <Link to={"메인으로 이동"}>메인</Link>
+            <Link to={"/"}>메인</Link>
           </li>
           <li>
-            <Link to={"메뉴리스트로 이동"}>메뉴 소개</Link>
+            <Link to={"/menu/list"}>메뉴 소개</Link>
           </li>
         </ul>
       </div>

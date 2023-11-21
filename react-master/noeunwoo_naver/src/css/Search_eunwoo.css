@@ -1,0 +1,16 @@
+.search-wrap>input{
+    background-color: white;
+    border-radius: 12px;
+    padding: 6px;
+    width: 350px;
+}
+.Category>button{
+    width: 70px;
+    height: 35px;
+    margin-left: 6px;
+}
+.rolling-list {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    flex-shrink: 0;
+}
